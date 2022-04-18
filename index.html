@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon-members-club</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,300&family=Dancing+Script:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body id="page">
+    <div class="wrapper">
+        <div class="pokemons">
+             <div id="pikachu"></div>
+             <div id="pokemon-ball"></div>
+        </div>
+
+        <h1>Pokemon</h1>
+
+        <h2>Secret members club</h2>
+        
+        <div class="bt" >
+             <button onclick="music()">music</button>
+        </div>  
+
+        <div class="content">
+            <form id="form" action="http://se.shenkar.ac.il/teach/web1/get_form3.php" method="get">
+              <div class="form-group">
+                 <label>Pokemon-name:</label>
+                  <input id="name" class="form-control" type="text" name="pokemonName" placeholder="Pikachu" required>
+             </div>
+
+              <div class="form-group">
+                  <label>Owner-name:</label>
+                  <input id="name" class="form-control" type="text" name="fullName" placeholder="Ash Ketchum" pattern=".*\s.*" title="A full name must contain one space" required>
+              </div>
+
+      
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input id="password" class="form-control" type="password" name="pass" placeholder="Ab123456" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title="Password must contain uppercase / lowercase letters and numbers">
+                </div>
+
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" class="form-control" name="mail" placeholder="AshKetchum@gmail.com" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" title="Email must contain @">
+                </div>
+
+                <div class="form-group">
+                    <label>Website:</label>
+                    <input type="url" class="form-control" name="website" placeholder="http://www.AshKetchum.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone-number:</label>
+                    <input type="tel" class="form-control" name="phone" placeholder="052-*******" pattern="[0-9]{9,10}">
+                </div>
+
+                <div class="form-group">
+                    <label>Address:</label>
+                    <input type="address" class="form-control" name="address" placeholder="Pallet city">
+                </div>
+
+                <div class="form-group">
+                    <label>How many hours a day do you play Pokemon?</label>
+                    <input type="number" class="form-control" min="0" name="coffee" placeholder="2">
+                </div>
+
+                <div class="form-group">
+                    <label>How powerful is your Pokemon?</label>
+                    <p>0 <input type="range" min="0" max="100" name="temper"> 100</p>
+                </div>
+
+                <div class="form-group ">
+                    <label>Special attacks:</label>
+                    <div class="form-check ">
+                        <p><input class="form-check-input" type="checkbox" name="interests[]" value="Bubble Beam" title="At least two attacks must be selected"> Bubble Beam</p>
+                        <p><input class="form-check-input" type="checkbox" name="interests[]" value="Dark Pulse" title="At least two attacks must be selected"> Dark Pulse</p>
+                        <p><input class="form-check-input" type="checkbox" name="interests[]" value="Flamethrower" title="At least two attacks must be selected"> Flamethrower</p>
+                        <p><input class="form-check-input" type="checkbox" name="interests[]" value="Gust" title="At least two attacks must be selected"> Gust</p>
+                        <p><input class="form-check-input" type="checkbox" name="interests[]" value="Ice Beam" title="At least two attacks must be selected"> Ice Beam</p>
+                        <p><input class="form-check-input" type="checkbox" name="interests[]" value="Leaf Storm" title="At least two attacks must be selected"> Leaf Storm</p>
+                        <p><input class="form-check-input" type="checkbox" name="interests[]" value="Psyshock" title="At least two attacks must be selected"> Psyshock</p>
+                        <p><input class="form-check-input" type="checkbox" name="interests[]" value="Thunderbolt" title="At least two attacks must be selected"> Thunderbolt</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="form-check">
+                        <p><input class="form-check-input" type="radio" name="gender" value="male">Male</p>
+                        <p><input class="form-check-input" type="radio" name="gender" value="female">Female</p>
+                        <p><input class="form-check-input" type="radio" name="gender" value="female">Other</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Age:</label>
+                    <select name="age" required>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    </select>
+                </div>
+
+                <input class="btn btn-primary" type="submit" value="submit" onclick="dosome()">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
